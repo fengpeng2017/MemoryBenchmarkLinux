@@ -38,7 +38,7 @@ run examples (default and custom):
 
 "./memorybenchmark min=1M max=1M pages=huge"
 
-One test with 1 Mbyte file
+One test with 1 Mbyte buffer
 
 Use huge pages option.
 
