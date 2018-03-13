@@ -1,0 +1,14 @@
+all: memorybench
+
+memorybench: memorybench.c libia32_static.a
+	gcc memorybench.c libia32_static.a -o memorybench
+	
+libia32_static.a: libia32.asm
+	fasm libia32.asm libia32.o
+	ar rc libia32_static.a libia32.o
+	ranlib libia32_static.a
+	
+clean:
+	rm *.a *.o memorybench -f
+
+
